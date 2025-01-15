@@ -1,0 +1,343 @@
+
+.section-portfolio {
+  margin-top: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+.section-portfolio .container_sk {
+  margin-bottom: 3.4rem;
+}
+.section-portfolio .grid {
+  padding-inline: 4.4rem;
+}
+.portfolio-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 1.8rem;
+}
+.portfolio-img {
+  width: 100%;
+}
+.portfolio-grid {
+  display: grid;
+  margin-top: 1.2rem;
+}
+.section-skills {
+  position: relative;
+  background-color: var(--color-6);
+  padding-block: 7.2rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 5.5rem;
+  justify-items: center;
+  margin-top: 3.2rem !important;
+}
+.skills-subheading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 7.2rem;
+  margin-top: 1.2rem;
+  letter-spacing: 0.75px;
+}
+.skill-item {
+  text-align: center;
+}
+.skill-item:hover .skill-item-img {
+  transform: scale(1.1);
+}
+.skill-item-img {
+  transition: transform 0.3s ease-in-out;
+}
+.skill-item-img {
+  height: 76px;
+  width: 76px;
+}
+.section-skills svg {
+  height: 76px;
+  width: 76px;
+}
+.container_sk {
+  padding: 0 6.4rem;
+  margin: 0 auto;
+}
+@media (max-width: 69rem) {
+  .grid {
+    column-gap: 5.5rem;
+  }
+}
+@media (max-width: 60rem) {
+  .grid {
+    column-gap: 4.8rem;
+  }
+  .subheading_sk {
+    font-size: 1.4rem;
+  }
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+  .portfolio-title {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 36.5rem) {
+  .my-5 {
+    margin-top: 3.4rem;
+  }
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+  .subheading_sk {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media (max-width: 34rem) {
+  .heading-secondary {
+    font-size: 2.8rem;
+  }
+  .container_sk {
+    padding: 0 2.4rem;
+  }
+}
+@media (max-width: 26.5rem) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+  .container_sk {
+    padding: 0 1.3rem;
+  }
+}
+@media (max-width: 68.75rem) {
+  .grid {
+    column-gap: 5.4rem;
+    row-gap: 4.6rem;
+  }
+  .section-portfolio .grid {
+    padding-inline: 3.4rem;
+  }
+}
+@media (max-width: 62.5rem) {
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+  .subheading_sk {
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .section-portfolio .grid {
+    column-gap: 4.4rem;
+    padding-inline: 0;
+  }
+}
+@media (max-width: 52rem) {
+  .heading-secondary {
+    font-size: 2.7rem;
+  }
+  .subheading_sk {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+  .section-skills svg {
+    height: 64px;
+    width: 64px;
+  }
+  .section-skills .portfolio-title {
+    font-size: 2.2rem;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section-portfolio .grid {
+    column-gap: 4.4rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5.4rem;
+  }
+}
+@media (max-width: 44.25rem) {
+  .container_sk {
+    padding: 0 3.2rem;
+  }
+  .section-skills svg {
+    height: 6rem;
+    width: 6rem;
+  }
+  .skills-grid {
+    column-gap: 1.2rem;
+  }
+  .section-portfolio .grid {
+    padding-inline: 0;
+    column-gap: 3.2rem;
+  }
+}
+@media (max-width: 35.5rem) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-skills .portfolio-title {
+    font-size: 2rem;
+  }
+  .skills-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 5.2rem;
+  }
+  .section-portfolio .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 30rem) {
+  .container_sk {
+    padding: 0 2.4rem;
+  }
+  .section-skills svg {
+    height: 5.2rem;
+    width: 5.2rem;
+  }
+  .section-skills .portfolio-title {
+    font-size: 1.8rem;
+  }
+  .skills-grid {
+    column-gap: 1.2rem;
+  }
+}
+@media (max-width: 27rem) {
+  .section-skills svg {
+    height: 4.4rem;
+    width: 4.4rem;
+  }
+  .skills-grid {
+    column-gap: 0.6rem;
+    row-gap: 4.4rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 63.5%;
+  overflow-x: hidden;
+  font-family: "Secular One", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+.heading-secondary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-secondary {
+  font-size: 3.6rem;
+  line-height: 1.2;
+}
+.subheading_sk {
+  display: block;
+  color: #000;
+  margin-bottom: 8rem;
+  letter-spacing: 0.75px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+}
+.container_sk {
+  padding: 0 6.4rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 4.6rem;
+}
+.my-1 {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.my-2 {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.my-3 {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.my-4 {
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+}
+.my-5 {
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.skills-grid-badge {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5.5rem;
+  justify-items: center;
+  margin-top: 3.2rem !important;
+}
+
+.container_badge{
+  width: 75%;
+ margin: 0 auto;
+}
+
+
+@media (max-width: 62.5rem) {
+  .skills-grid-badge {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 52rem) {
+  .skills-grid-badge {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 44.25rem) {
+  .skills-grid-badge {
+    column-gap: 1.2rem;
+  }
+}
+
+@media (max-width: 35.5rem) {
+  .skills-grid-badge {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 30rem) {
+  .skills-grid-badge {
+    column-gap: 6.2rem;
+  }
+}
+
+.skill-item-st:hover .skill-item-img-badge {
+  transform: scale(1.1);
+}
+
+.skill-item-img-badge {
+  transition: transform 0.3s ease-in-out;
+  height: 128px;
+  width: 128px;
+  /* border-radius: 50%; */
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}

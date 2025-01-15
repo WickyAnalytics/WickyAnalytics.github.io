@@ -1,0 +1,105 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.portfolio-tech {
+  display: none;
+}
+.container-f {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  margin: 30px auto 30px;
+}
+.select-btn-f {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(221, 221, 221);
+}
+.select-btn-f .btn-text-f {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+.select-btn-f .arrow-dwn-f {
+  display: flex;
+  height: 21px;
+  width: 21px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  background: #6e93f7;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.select-btn-f.open .arrow-dwn-f {
+  transform: rotate(-180deg);
+}
+.list-items-f {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  border: 1px solid rgb(221, 221, 221);
+}
+.select-btn-f.open ~ .list-items-f {
+  display: block;
+}
+.list-items-f .item-f {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+.list-items-f .item-f:hover {
+  background-color: #e7edfe;
+}
+.item-f .item-text-f {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+.item-f .checkbox-f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1.5px solid #c0c0c0;
+  transition: all 0.3s ease-in-out;
+}
+.item-f.checked .checkbox-f {
+  background-color: #4070f4;
+  border-color: #4070f4;
+}
+.checkbox-f .check-icon {
+  color: #fff;
+  font-size: 11px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+.item-f.checked .check-icon {
+  transform: scale(1);
+}

@@ -1,0 +1,87 @@
+@import "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rock+Salt&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+blockquote,
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+input,
+label,
+li,
+p,
+q,
+small,
+span,
+textarea {
+  font-family: DM Sans, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+:root {
+  --color-1: #5956e9;
+  --color-2: #ffd109;
+  --color-3: #82cefd;
+  --color-4: #292930;
+  --color-5: #423ef3;
+  --color-6: #f7f8fd;
+  --text-color-1: #8a90a2;
+  --text-color-2: #292930;
+  --text-color-3: #fff;
+  --text-color-4: #f8f8f8;
+  --text-color-5: #f7f8fd;
+}
+
+/* Scroll-to-Top Button */
+button#scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #423ef3;
+  color: #fff;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
+  z-index: 9999;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button#scrollToTopButton.show {
+  display: block;
+}
+
+.portfolio-tech {
+  display: none;
+}
+.hidden {
+  display: none;
+}
