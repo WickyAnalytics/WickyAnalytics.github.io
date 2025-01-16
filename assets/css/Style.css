@@ -53,7 +53,7 @@ body {
   
   /* Header */
   .container-new {
-    max-width: 1200px;
+    max-width: 2500px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -255,7 +255,7 @@ body {
   /* Hero Section */
   .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 70px 20px;
   background-color: #1a1a1a; /* Dark background */
@@ -263,7 +263,8 @@ body {
 }
   
 .hero-content {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 800px; /* Full width on mobile */
+    width: 100%;
   }
   
   .hero-content h1 {
@@ -299,6 +300,7 @@ body {
     transition: all 0.3s ease-out 0s;
     height: 70px;
     width: 240px;
+    margin: 20px 0;
   }
     
     .my-projects:hover {
@@ -340,7 +342,7 @@ body {
 
   /* About Me Section */
 .about {
-    padding: 50px;
+    padding: 50px 20px;
     background-color: #333; /* Darker background */
   }
   
@@ -348,6 +350,8 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    max-width: 1200 px;
+    margin: 0 auto;
   }
   
   .about-text {
@@ -372,6 +376,43 @@ body {
     font-size: 16px;
     color: #b0b0b0; /* Light gray text */
   }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .my-projects {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 0 30px;
+    height: 60px;
+    width: 200px;
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .about-text,
+  .about-timeline {
+    max-width: 100%; /* Full width on mobile */
+  }
+
+  .timeline-item h3 {
+    font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .timeline-item p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+}
+
+
   
   /* Skills Section */
 .container_sk {
@@ -576,7 +617,7 @@ body {
   /* Portfolio Section */
   /* Portfolio Section */
 .portfolio {
-    padding: 50px 20px;
+    padding: 40px 40px;
     background-color: #333; /* Darker background */
     color: #e0e0e0; /* Light text */
     text-align: center;
@@ -594,12 +635,12 @@ body {
   }
   
   .portfolio-card {
+    display: grid;
     background-color: #1a1a1a; /* Dark background */
     padding: 20px;
     border-radius: 10px;
     text-align: center; /* Center text and content */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
   }
@@ -608,7 +649,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .portfolio-text-box {
     margin-bottom: 15px;
     text-align: center; /* Center text */
@@ -643,8 +684,8 @@ body {
   
   /* Make Images Bigger */
   .icon_tech_g {
-    width: 700px; /* Increase image size */
-    height: 400px; /* Increase image size */
+    width: 100%; /* Increase image size */
+    height: auto; /* Increase image size */
     margin-right: 10px;
     border-radius: 10px; /* Optional: Add rounded corners */
     object-fit:inherit; /* Ensure the image fits nicely */
@@ -717,6 +758,44 @@ body {
     background-color: #ffd109; /* Yellow for active page */
     color: #1a1a1a; /* Dark text */
   }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .portfolio-heading {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 15px;
+  }
+
+  .portfolio-card {
+    padding: 15px;
+  }
+
+  .portfolio-title {
+    font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .portfolio-tech {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .portfolio-description {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .portfolio-btn {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 8px 16px;
+  }
+
+  .page-btn {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 8px 16px;
+  }
+}
+
 
   /* Contact Section-----------------------------------------------------*/
   .contact {
@@ -757,8 +836,12 @@ body {
   }
   
   /* Footer */
+  .custom-shape-divider-bottom-1652512758 .shape-fill {
+    fill: #1a1a1a;
+}
+
 .section-footer {
-    padding: 3.2rem 0;
+    padding: 2 rem 0;
     background-color: #1a1a1a; /* Dark background */
     text-align: center;
   }
@@ -827,7 +910,7 @@ body {
   .copy-right1 {
     font-size: 16px;
     color: #b0b0b0; /* Light gray text */
-    background-color: #333; /* Darker background */
+    background-color: #1a1a1a; /* Darker background */
     padding: 20px;
     text-align: center;
     margin-top: 3.2rem;
@@ -1142,14 +1225,14 @@ body {
   }
   
   .container-ab {
-    max-width: 1200px;
+    max-width: 1500px;
     padding: 0 20px;
     margin: 0 auto;
   }
   
   .grid-ab {
     display: grid;
-    column-gap: 6.4rem;
+    column-gap: 6.0rem;
     row-gap: 4.6rem;
   }
   @media (max-width: 768px) {
