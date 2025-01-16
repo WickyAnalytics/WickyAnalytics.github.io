@@ -118,3 +118,35 @@ document.querySelectorAll('.scroll-link').forEach(link => {
       headerUl.style.right = '-100%';
     }
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const timelineEvents = document.querySelectorAll(".timeline-event");
+    const descriptionContainer = document.querySelector(".timeline-descriptions");
+  
+    timelineEvents.forEach((event) => {
+      event.addEventListener("click", () => {
+        const year = event.getAttribute("data-year");
+        const degree = event.querySelector(".text-small").textContent;
+  
+        const descriptionContent = `
+          <h3>${year} - "${degree}"</h3>
+          <p>${getDescriptionForYear(year)}</p>
+        `;
+  
+        descriptionContainer.innerHTML = descriptionContent;
+      });
+    });
+  
+    function getDescriptionForYear(year) {
+      switch (year) {
+        case "2023":
+          return "Graduated with a Bachelor’s Degree in Computer and Information Technology from Future University. Final project: AI radar tracking system (Grade A).";
+        case "2024":
+          return "Started my Master's Degree in Software Engineering at Helwan University. Participated in DEPI as a Trainee, gaining hands-on experience with tools like SQL, Python, and Excel. Chosen as a leader for my trainee group. Joined Andalusia Hospital as a Data Analyst in the HR department at the end of 2024.";
+        case "2025":
+          return "Expected to complete my thesis: 'Exploring advanced software solutions for data analysis and system optimization.' Preparation began in 2024.";
+        default:
+          return "No description available.";
+      }
+    }
+  });

@@ -420,6 +420,9 @@ body {
     max-width: 1200 px;
     margin: 0 auto;
   }
+  .about-me-img-box-ab img {
+    width: 50%;
+  }
   
   .about-text {
     max-width: 50%;
@@ -656,7 +659,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
   }
   .skill-item {
@@ -1275,86 +1278,284 @@ body {
     transform: translateY(-2px); /* Slight lift effect */
   }
 
-  /* About Me Section */
+  /* About Me Section-------------------------------------------------------------- */
+/* About Me Section */
+/* About Me Section */
 .section-about-me-ab {
-    background: #2B2C30; /* Dark background */
-    padding: 50px 0;
-  }
-  
-  .subheading-ab {
-    display: block;
-    font-size: 5.75rem;
-    font-weight: 700;
-    color: #ffd109; /* Yellow for headings */
-    text-align: center;
-    margin-bottom: 2.6rem;
-    letter-spacing: 0.75px;
-  }
-  
-  .container-ab {
-    max-width: 1500px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-  
+  background: #2B2C30; /* Dark background */
+  padding: 50px 0;
+}
+
+.container-ab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.grid-ab {
+  display: grid;
+  grid-template-columns: 30% 70%; /* Image takes 30%, right container takes 70% */
+  gap: 30px;
+}
+
+.about-me-img-box-ab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me-img-box-ab img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-me-img-box-ab img:hover {
+  transform: scale(1.05);
+}
+
+.right-container-ab {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* About Me Title */
+.about-me-title-ab {
+  font-size: 5.75rem;
+  font-weight: 700;
+  color: #ffd109; /* Yellow for headings */
+  margin-bottom: 20px;
+  letter-spacing: 0.75px;
+}
+
+.about-me-text-box-ab {
+  background-color: #2a4937; /* Dark green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-text-ab {
+  font-size: 2.4rem;
+  color: #e0e0e0; /* Light text */
+  line-height: 1.8;
+}
+
+.highlight-ab {
+  color: #ffd109; /* Yellow for highlights */
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* My Background Title */
+.my-background-title-ab {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffd109; /* Yellow for headings */
+  margin-bottom: 20px;
+  letter-spacing: 0.75px;
+}
+
+/* Timeline Container */
+.timeline-container-ab {
+  background-color: #2a4937; /* Dark green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal Timeline (Visible on Desktop) */
+.timeline-horizontal {
+  display: block; /* Visible by default */
+}
+
+.timeline-horizontal svg {
+  width: 100%;
+  height: auto;
+}
+
+.timeline-horizontal .line {
+  stroke: #ffd109; /* Yellow line */
+  stroke-width: 4; /* Line stroke set to 3 */
+}
+
+.timeline-horizontal .circle {
+  fill: #000; /* Black circles */
+  r: 18; /* Slightly larger circles (default is 10) */
+}
+
+.timeline-horizontal .text {
+  font-size: 1.5rem;
+  fill: #fff; /* White text for degree */
+}
+
+.timeline-horizontal .text-year {
+  font-size: 1.4rem;
+  fill: #ffd109; /* Yellow text for year */
+}
+
+/* Vertical Timeline (Visible on Mobile) */
+.timeline-vertical {
+  display: none; /* Hidden by default */
+}
+
+.timeline-vertical svg {
+  width: 100%;
+  height: auto;
+}
+
+.timeline-vertical .line {
+  stroke: #ffd109; /* Yellow line */
+  stroke-width: 3; /* Line stroke set to 3 */
+}
+
+.timeline-vertical .circle {
+  fill: #000; /* Black circles */
+  r: 12; /* Slightly larger circles (default is 10) */
+}
+
+.timeline-vertical .text {
+  font-size: 1.5rem;
+  fill: #fff; /* White text for degree */
+}
+
+.timeline-vertical .text-year {
+  font-size: 1.5rem;
+  fill: #ffd109; /* Yellow text for year */
+}
+
+/* Timeline Descriptions */
+.timeline-descriptions {
+  margin-top: 20px;
+  background-color: #2a3a30; /* Dark green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.timeline-descriptions h3 {
+  font-size: 2rem;
+  color: #ffd109; /* Yellow for headings */
+  margin-bottom: 10px;
+}
+
+.timeline-descriptions p {
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Light text */
+  line-height: 1.6;
+}
+
+.description {
+  display: none; /* Hidden by default */
+  background-color: #2a3a30; /* Dark green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.description h3 {
+  font-size: 2rem;
+  color: #ffd109; /* Yellow for headings */
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Light text */
+  line-height: 1.6;
+}
+
+/* Show description when active */
+.description.active {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .grid-ab {
-    display: grid;
-    column-gap: 6.0rem;
-    row-gap: 4.6rem;
+    grid-template-columns: 1fr; /* Single column layout on mobile */
   }
-  @media (max-width: 768px) {
-  .grid-col-2-ab {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .about-me-img-box-ab {
-    text-align: center;
-  }
-  
+
   .about-me-img-box-ab img {
-    width: 100%;
-    border-radius: 10px;
+    width: 50%; /* Smaller image on mobile */
   }
-  
-  .about-me-text-box-ab {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .about-me-text-ab {
-    font-size: 2.4rem;
-    color: #e0e0e0; /* Light text */
-    line-height: 1.8;
+    font-size: 1.8rem; /* Smaller text on mobile */
   }
-  
+
   .highlight-ab {
-    color: #ffd109; /* Yellow for highlights */
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 2.2rem; /* Smaller highlight text on mobile */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero {
-        display: flex;
-  justify-content: space-between;
-      flex-direction: column; /* Stack content vertically */
-      text-align: center; /* Center-align text */
-      padding: 50px 20px;
-    }
-  
-    .about-me-img-box-ab img {
-      width: 50%;
-    }
-  
-    .about-me-text-ab {
-      font-size: 1.8rem;
-    }
-  
-    .highlight-ab {
-      font-size: 2.2rem;
-    }
+
+  .timeline-horizontal {
+    display: none; /* Hide horizontal timeline on mobile */
   }
+
+  .timeline-vertical {
+    display: block; /* Show vertical timeline on mobile */
+  }
+
+  .about-me-title-ab,
+  .my-background-title-ab {
+    font-size: 4rem; /* Smaller title on mobile */
+  }
+}
+/* Close Button Styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Close Button Styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+/* Ensure the description container has relative positioning */
+.timeline-descriptions {
+  position: relative;
+}
 
   /* Button Styles */
 .my-projects {
@@ -1379,4 +1580,3 @@ body {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-}
