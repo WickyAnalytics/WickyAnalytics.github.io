@@ -29,7 +29,7 @@
     <input type="checkbox" id="click">
     <label for="click" class="mainicon">
 		<div class="menu-new">
-		  <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+			<i class="bx bx-menu"></i> <!-- FontAwesome hamburger icon -->
 		</div>
 	  </label>
 
@@ -199,6 +199,72 @@
 	  </div>
 	</div>
   </section>
+<!-- Section Skills -->
+
+<section class="section-skills" id="skills">
+	<div class="container_sk" id="Skills">
+	  <span class="subheading_sk">Skills &amp; Tools</span>
+	</div>
+
+	<div class="container_sk skills-grid">
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/Tableau.png" alt="Tableau icon">
+		<p class="portfolio-title">Tableau</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/PowerBI.png" alt="mysql icon">
+		<p class="portfolio-title">PowerBi</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/excel.png" alt="Docker icon">
+		<p class="portfolio-title">Excel</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/mysql-svgrepo-com.svg" alt="mysql icon">
+		<p class="portfolio-title">MySQL</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/sql-server.png" alt="sqlserver icon">
+		<p class="portfolio-title">MySQL Server</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/pandas.svg" alt="pandas icon">
+		<p class="portfolio-title">Pandas</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/numpy.png" alt="numpy icon">
+		<p class="portfolio-title">Numpy</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/vs.png" alt=" visual studio icon">
+		<p class="portfolio-title">Visual Studio</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/jupyter.png" alt="jupyter icon">
+		<p class="portfolio-title">Jupyter Notebook</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/figma.png" alt="Figma icon">
+		<p class="portfolio-title">Figma</p>
+	  </div>
+
+	  <div class="skill-item">
+		<img loading="lazy" class="skill-item-img" src="/images/skills/WhiteGithub.png" alt="trello icon">
+		<p class="portfolio-title">Github</p>
+	  </div>
+
+	</div>
+  </section>
+
 
   <!-- filter section -->
       <div class="container-f hidden">
@@ -232,189 +298,153 @@
 
 
   <!-- Portfolio Section --------------------------------------------------------------------------->
-  <div="section-portfolio" id="section-portfolio">
+  <div id="section-portfolio" class="section-portfolio">
 	<div class="container-pt" id="Portfolio">
 	  <script>
 		function scrollToElement(elementId) {
 		  const element = document.getElementById(elementId);
-
 		  if (element) {
 			const yOffset = -70; // Adjust this value as needed
-			const y =
-			  element.getBoundingClientRect().top +
-			  window.pageYOffset +
-			  yOffset;
+			const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 			window.scrollTo({ top: y, behavior: "smooth" });
 		  }
 		}
 	  </script>
-
-<section id="portfolio" class="portfolio">
-	<h2 class="portfolio-heading">Portfolio</h2>
-	<div class="portfolio-grid">
-	  <!-- Drug Sales Analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Drug Sales Analysis</p>
-		  <p class="portfolio-tech">Power BI</p>
-		  <p class="portfolio-description">
-			Designed Power BI dashboards analyzing drug transactions, revenue, and profit metrics.
-		  </p>
-		</div>
-		<div>
-		  <img src="images/Drug analysis 1.png" class="icon_tech_g" alt="Power BI Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Drug%20Analysis" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
   
-	  <!-- Healthcare Patient Flow Analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Healthcare Patient Flow Analysis</p>
-		  <p class="portfolio-tech">Power BI</p>
-		  <p class="portfolio-description">
-			Analyzed appointment data to optimize scheduling and resource allocation in a hospital environment.
-		  </p>
-		</div>
-		<div>
-		  <img src="images/HealthCare Analysis.png" class="icon_tech_g" alt="Power BI Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Healthcare" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
+	  <section id="portfolio" class="portfolio">
+		<span class="subheading_pt">Portfolio</span>
+		<h2 class="heading-secondary">Some previous projects, but I am eager to take on more.</h2>
+		<div class="portfolio-grid">
+		  <!-- Drug Sales Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/Drug analysis 1.png" alt="Drug Sales Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Drug Sales Analysis</h3>
+			  <p class="portfolio-tech">Power BI</p>
+			  <p class="portfolio-description">
+				Designed Power BI dashboards analyzing drug transactions, revenue, and profit metrics.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Drug%20Analysis" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
   
-	  <!-- Financial Loan Portfolio Analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Transportation Analysis </p>
-		  <p class="portfolio-tech">Power BI</p>
-		  <p class="portfolio-description">
-			Built dashboards for tracking beak hours, riders KBIs.
-		  </p>
-		</div>
-		<div>
-		  <img src="images/Transit Analysis.png" class="icon_tech_g" alt="Power BI Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/Financial-domain" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
+		  <!-- Healthcare Patient Flow Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/HealthCare Analysis.png" alt="Healthcare Patient Flow Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Healthcare Patient Flow Analysis</h3>
+			  <p class="portfolio-tech">Power BI</p>
+			  <p class="portfolio-description">
+				Analyzed appointment data to optimize scheduling and resource allocation in a hospital environment.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Healthcare" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
   
-	  <!-- Bike Analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Bike Analysis</p>
-		  <p class="portfolio-tech">Tableau</p>
-		  <p class="portfolio-description">
-			Created an interactive dashboard for sales managers to monitor team performance.
-		  </p>
-		</div>
-		<div>
-		  <img src="images/Bikes Analysis Excel.png" class="icon_tech_g" alt="Tableau Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/Excel/tree/main/Depi_Bike" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
+		  <!-- Transportation Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/Transit Analysis.png" alt="Transportation Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Transportation Analysis</h3>
+			  <p class="portfolio-tech">Power BI</p>
+			  <p class="portfolio-description">
+				Built dashboards for tracking peak hours, riders, and key business indicators.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/Financial-domain" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
   
-	  <!-- Sales Dynamic analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Sales Dynamic analysis</p>
-		  <p class="portfolio-tech">Tableau, Python</p>
-		  <p class="portfolio-description">
-		  </p>
-		</div>
-		<div>
-		  <img src="images/sales analysis 1.png" class="icon_tech_g" alt="Python Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Sales%20Project" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
+		  <!-- Bike Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/Bikes Analysis Excel.png" alt="Bike Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Bike Analysis</h3>
+			  <p class="portfolio-tech">Tableau</p>
+			  <p class="portfolio-description">
+				Created an interactive dashboard for sales managers to monitor team performance.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/Excel/tree/main/Depi_Bike" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
   
-	  <!-- Bank Loan Analysis -->
-	  <div class="portfolio-card" data-page="1">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Bank Loan Analysis</p>
-		  <p class="portfolio-tech">excel,Power, SQL</p>
-		  <p class="portfolio-description">
-			Built dashboards for tracking loan metrics, reducing delinquency rates by 15%.
-		  </p>
+		  <!-- Sales Dynamic Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/sales analysis 1.png" alt="Sales Dynamic Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Sales Dynamic Analysis</h3>
+			  <p class="portfolio-tech">Tableau, Python</p>
+			  <p class="portfolio-description">
+				Analyzed sales data to identify trends and optimize performance.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/power-bi/tree/main/Sales%20Project" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
+  
+		  <!-- Bank Loan Analysis -->
+		  <div class="portfolio-card" data-page="1">
+			<div class="portfolio-image">
+			  <img src="images/Finance analysis excel 1.png" alt="Bank Loan Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Bank Loan Analysis</h3>
+			  <p class="portfolio-tech">Excel, Power BI, SQL</p>
+			  <p class="portfolio-description">
+				Built dashboards for tracking loan metrics, reducing delinquency rates by 15%.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/Financial-domain" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
+  
+		  <!-- HR Analysis -->
+		  <div class="portfolio-card" data-page="2">
+			<div class="portfolio-image">
+			  <img src="images/Hr Analysis Tableau.png" alt="HR Analysis Dashboard" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">HR Analysis</h3>
+			  <p class="portfolio-tech">Excel, Tableau, Power BI, SQL</p>
+			  <p class="portfolio-description">
+				Analyzed HR data to improve employee performance and retention.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
+  
+		  <!-- Gaming Agency Progress Tracker -->
+		  <div class="portfolio-card" data-page="2">
+			<div class="portfolio-image">
+			  <img src="images/Gaming Agancy 1.png" alt="Gaming Agency Progress Tracker" class="icon_tech_g">
+			</div>
+			<div class="portfolio-content">
+			  <h3 class="portfolio-title">Gaming Agency Progress Tracker</h3>
+			  <p class="portfolio-tech">Google Sheets</p>
+			  <p class="portfolio-description">
+				Tracked and analyzed progress for a gaming agency using Google Sheets.
+			  </p>
+			  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
+			</div>
+		  </div>
 		</div>
-		<div>
-		  <img src="images/Finance analysis excel 1.png" class="icon_tech_g" alt="Tableau Icon">
+  
+		<!-- Pagination Controls -->
+		<div class="pagination">
+		  <button class="page-btn" data-page="1">1</button>
+		  <button class="page-btn" data-page="2">2</button>
+		  <button class="page-btn" data-page="3">3</button>
 		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/Financial-domain" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
-	
-	<!-- Hr Analysis Page 2---------------------------------------------------->
-	  
-	<div class="portfolio-card" data-page="2">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">HR Analysis</p>
-		  <p class="portfolio-tech">excel ,Tableau ,Power, SQL</p>
-		  <p class="portfolio-description">
-		  </p>
-		</div>
-		<div>
-		  <img src="images/Hr Analysis Tableau.png" class="icon_tech_g" alt="Tableau Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
-
-	<div class="portfolio-card" data-page="2">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">HR Analysis</p>
-		  <p class="portfolio-tech">excel ,Tableau ,Power, SQL</p>
-		  <p class="portfolio-description">
-		  </p>
-		</div>
-		<div>
-		  <img src="images/hr analysis 2.png" class="icon_tech_g" alt="Tableau Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
-
-	<!-- Hr Analysis -->
-	<div class="portfolio-card" data-page="2">
-		<div class="portfolio-text-box">
-		  <p class="portfolio-title">Gaming Agency Progoress Tracker</p>
-		  <p class="portfolio-tech">Google Sheets</p>
-		  <p class="portfolio-description">
-		  </p>
-		</div>
-		<div>
-		  <img src="images/Gaming Agancy 1.png" class="icon_tech_g" alt="Tableau Icon">
-		</div>
-		<div class="portfolio-button-area">
-		  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
-		</div>
-	  </div>
+	  </section>
 	</div>
-
-</div>
-</div>
-</div>
-	
-
-	<!-- Pagination Controls -->
-	<div class="pagination">
-	  <button class="page-btn" data-page="1">1</button>
-	  <button class="page-btn" data-page="2">2</button>
-	  <button class="page-btn" data-page="3">3</button>
-	</div>
-  </section>
-  <br><br><br>
+  </div>
 
   <!-- Contact Section -->
 <section class="contact_container___CE5a" id="contact">

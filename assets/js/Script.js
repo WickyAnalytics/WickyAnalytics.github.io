@@ -130,7 +130,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
   
         const descriptionContent = `
           <h3>${year} - "${degree}"</h3>
-          <p>${getDescriptionForYear(year)}</p>
+          ${getDescriptionForYear(year)}
         `;
   
         descriptionContainer.innerHTML = descriptionContent;
@@ -140,13 +140,33 @@ document.querySelectorAll('.scroll-link').forEach(link => {
     function getDescriptionForYear(year) {
       switch (year) {
         case "2023":
-          return "Graduated with a Bachelor’s Degree in Computer and Information Technology from Future University. Final project: AI radar tracking system (Grade A).";
+          return `
+            <ul>
+              <li>Graduated with a <strong>Bachelor’s Degree in Computer and Information Technology</strong> from Future University.</li>
+              <li>Developed an <strong>AI-based traffic rule violation detection system</strong> using YOLOv7, achieving <strong>95% accuracy</strong> (Grade A).</li>
+            </ul>
+          `;
         case "2024":
-          return "Started my Master's Degree in Software Engineering at Helwan University. Participated in DEPI as a Trainee, gaining hands-on experience with tools like SQL, Python, and Excel. Chosen as a leader for my trainee group. Joined Andalusia Hospital as a Data Analyst in the HR department at the end of 2024.";
+          return `
+            <ul>
+              <li>Started my <strong>Master's Degree in Software Engineering</strong> at Helwan University.</li>
+              <li>Participated in the <strong>DEPI program</strong> as a Trainee, gaining expertise in <strong>SQL, Python, Power BI, and Google Sheets</strong>.</li>
+              <li>Joined <strong>Andalusia Hospital</strong> as a <strong>Data Analyst</strong>:
+                <ul>
+                  <li>Improved HR and payroll data accuracy and streamlined operations.</li>
+                </ul>
+              </li>
+            </ul>
+          `;
         case "2025":
-          return "Expected to complete my thesis: 'Exploring advanced software solutions for data analysis and system optimization.' Preparation began in 2024.";
+          return `
+            <ul>
+              <li>Expected to complete my <strong>Master's thesis</strong>: "Exploring advanced software solutions for data analysis and system optimization."</li>
+              <li>Continued working as a <strong>Data Analyst</strong> at Andalusia Hospital, providing actionable insights for HR and payroll decision-making.</li>
+            </ul>
+          `;
         default:
-          return "No description available.";
+          return "<p>No description available.</p>";
       }
     }
   });
