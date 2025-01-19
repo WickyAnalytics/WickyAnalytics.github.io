@@ -502,35 +502,51 @@ body {
 }
 @media (max-width: 768px) {
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    grid-template-rows: auto auto; /* 2 rows */
-    gap: 20px; /* Space between grid items */
-    padding: 60px 20px;
-    text-align: left; /* Align container content to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align items horizontally */
+    padding: 40px 20px; /* Reduced padding for better spacing */
+    text-align: center; /* Center-align text */
+    background-color: #333; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    position: relative; /* Enable positioning for overlapping */
+    overflow: hidden; /* Hide overflow from overlapping */
   }
 
   .hero-image {
-    grid-column: 1 / 2; /* Place image in the first column */
-    grid-row: 1 / 2; /* Place image in the first row */
-    text-align: left; /* Align image to the left */
+    display: none;
+    width: 180px; /* Slightly larger image */
+    height: 180px; /* Slightly larger image */
+    border-radius: 50%; /* Circular image */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    margin-bottom: -40px; /* Overlap with text */
+    z-index: 1; /* Ensure image is above the background */
+    position: relative; /* Enable positioning */
   }
 
   .hero-image img {
-    max-width: 100%; /* Ensure image doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Add border radius */
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain aspect ratio */
   }
 
   .hero-content {
-    grid-column: 2 / 3; /* Place text in the second column */
-    grid-row: 1 / 2; /* Place text in the first row */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center-align text */
+    position: relative; /* Enable positioning */
+    z-index: 2; /* Ensure text is above the image */
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 30px; /* Overlap with image */
+    width: 100%; /* Full width */
   }
 
   .hero-content h1 {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    line-height: 1.1; /* Tighter line spacing */
     margin-bottom: 10px; /* Add spacing below the heading */
+    color: #ffd109; /* Yellow for headings */
   }
 
   .hero-content h1 span {
@@ -538,18 +554,17 @@ body {
   }
 
   .hero-content p {
-    font-size: 1rem; /* Smaller font size for mobile */
+    font-size: 1.25rem; /* Slightly larger font size for readability */
     margin-bottom: 20px; /* Add spacing below the paragraph */
+    color: #b0b0b0; /* Light gray text */
   }
 
   .my-projects {
-    grid-column: 1 / 3; /* Span button across both columns */
-    grid-row: 2 / 3; /* Place button in the second row */
     width: 100%; /* Full width */
     max-width: 240px; /* Limit button width */
     margin: 0 auto; /* Center the button horizontally */
-    padding: 10px 20px; /* Add padding for better touch targets */
-    font-size: 1.2rem; /* Smaller font size for buttons */
+    padding: 12px 24px; /* Add padding for better touch targets */
+    font-size: 1rem; /* Slightly larger font size for buttons */
     text-align: center; /* Center-align button text */
     background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
     color: #1a1a1a; /* Dark text */
@@ -568,8 +583,8 @@ body {
 
   .social-new {
     display: flex;
-    justify-content: flex-start; /* Align icons to the left */
-    gap: 10px; /* Small gap between icons */
+    justify-content: center; /* Center-align icons */
+    gap: 15px; /* Small gap between icons */
     margin-top: 20px; /* Add spacing */
   }
 
@@ -589,7 +604,6 @@ body {
     height: 40px; /* Smaller icon size */
   }
 }
-
 
   /* About Me Section */
 .about {
@@ -1618,16 +1632,16 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   max-width: 2000px;
-  padding-left: 90px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add some padding to avoid content touching the edges */
 }
-
 
 .grid-ab {
   display: grid;
   grid-template-columns: 30% 70%; /* Image takes 30%, right container takes 70% */
   gap: 30px;
   padding-top: 2px;
+  width: 100%; /* Ensure it takes full width */
 }
 
 .about-me-img-box-ab {
@@ -1761,7 +1775,6 @@ body {
   fill: #ffd109; /* Yellow text for year */
 }
 
-/* Timeline Descriptions */
 /* Timeline Descriptions */
 .timeline-descriptions {
   font-size: 18px;
