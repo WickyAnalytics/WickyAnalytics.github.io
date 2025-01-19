@@ -502,63 +502,18 @@ body {
 }
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column; /* Stack content vertically */
-    text-align: left; /* Align container content to the left */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 20px; /* Space between grid items */
     padding: 60px 20px;
-  }
-
-  .hero-content {
-    order: 1; /* Move content to the top */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    width: 100%; /* Full width */
-  }
-
-  .hero-content h1 {
-    font-size: 3rem; /* Smaller font size for mobile */
-    text-align: left; /* Align heading to the left */
-    width: 100%; /* Full width */
-    margin-bottom: 10px; /* Add spacing below the heading */
-  }
-
-  .hero-content p {
-    font-size: 1.2rem; /* Smaller font size for mobile */
-    text-align: center; /* Center-align the paragraph */
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Add spacing below the paragraph */
-  }
-
-  .my-projects {
-    width: 100%; /* Full width on mobile */
-    max-width: 240px; /* Limit button width */
-    margin: 20px auto; /* Center the button */
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: flex-end; /* Align icons to the right */
-    width: 100%; /* Full width */
-    margin-top: 10px; /* Add spacing */
-    gap: 10px; /* Small gap between icons */
-  }
-
-  .social-icons a {
-    font-size: 1.5rem; /* Smaller icon size */
-    color: #e0e0e0; /* Light text color */
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-
-  .social-icons a:hover {
-    color: #ffd109; /* Yellow on hover */
-    transform: translateY(-3px); /* Slight lift on hover */
+    text-align: left; /* Align container content to the left */
   }
 
   .hero-image {
-    order: 2; /* Move image to the bottom */
-    margin-top: 30px; /* Add spacing between content and image */
-    text-align: center; /* Center-align the image */
-    width: 100%; /* Full width */
+    grid-column: 1 / 2; /* Place image in the first column */
+    grid-row: 1 / 2; /* Place image in the first row */
+    text-align: left; /* Align image to the left */
   }
 
   .hero-image img {
@@ -567,23 +522,71 @@ body {
     border-radius: 10px; /* Optional: Add border radius */
   }
 
-  /* New: Flex container for h1 and social icons */
-  .hero-header {
-    display: flex;
-    justify-content: space-between; /* Space between h1 and social icons */
-    align-items: center; /* Vertically center items */
+  .hero-content {
+    grid-column: 2 / 3; /* Place text in the second column */
+    grid-row: 1 / 2; /* Place text in the first row */
+    text-align: left; /* Align text to the left */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-bottom: 10px; /* Add spacing below the heading */
+  }
+
+  .hero-content h1 span {
+    color: #7ed957; /* Green color for "George" */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin-bottom: 20px; /* Add spacing below the paragraph */
+  }
+
+  .my-projects {
+    grid-column: 1 / 3; /* Span button across both columns */
+    grid-row: 2 / 3; /* Place button in the second row */
     width: 100%; /* Full width */
-    margin-bottom: 20px; /* Add spacing below */
+    max-width: 240px; /* Limit button width */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 20px; /* Add padding for better touch targets */
+    font-size: 1.2rem; /* Smaller font size for buttons */
+    text-align: center; /* Center-align button text */
+    background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
+    color: #1a1a1a; /* Dark text */
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
 
-  .hero-header h1 {
-    margin: 0; /* Remove default margin */
-    flex: 1; /* Allow h1 to take up available space */
+  .my-projects:hover {
+    background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
   }
 
-  .hero-header .social-icons {
-    margin: 0; /* Remove default margin */
-    flex-shrink: 0; /* Prevent icons from shrinking */
+  .social-new {
+    display: flex;
+    justify-content: flex-start; /* Align icons to the left */
+    gap: 10px; /* Small gap between icons */
+    margin-top: 20px; /* Add spacing */
+  }
+
+  .social-new a {
+    font-size: 1.5rem; /* Smaller icon size */
+    color: #e0e0e0; /* Light text color */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-new a:hover {
+    color: #ffd109; /* Yellow on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+  }
+
+  .social-new svg {
+    width: 40px; /* Smaller icon size */
+    height: 40px; /* Smaller icon size */
   }
 }
 
@@ -914,25 +917,24 @@ body {
   background-color: #1a1a1a; /* Dark background */
   color: #e0e0e0; /* Light text */
 }
+
 .container-pt {
- /* Limit container width for better readability */
+  max-width: 1900px; /* Limit container width for better readability */
   margin: 0 auto; /* Center the container */
-  padding: 0px; /* Add padding inside the container */
+  padding: 0 0px; /* Add padding inside the container */
   background-color: #2a2a2a; /* Slightly lighter dark background */
   border-radius: 10px; /* Rounded corners for the container */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-
 .portfolio {
-  padding: 40px 40px;
+  padding: 40px 0; /* Adjusted padding */
   background-color: #333; /* Darker background */
   color: #e0e0e0; /* Light text */
   text-align: center;
   margin-bottom: 6.6rem;
   margin-top: 9.6rem;
 }
-
 
 .portfolio-heading {
   display: block;
@@ -946,15 +948,13 @@ body {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  column-gap: 20px; /* Reduced horizontal gap */
-  row-gap: 40px; /* Keep vertical gap the same */
-  padding: 40px; /* Add padding inside the grid */
+  grid-template-columns: repeat(2, minmax(300px, 1fr)); /* 2 columns at most */
+  gap: 20px; /* Consistent gap between items */
+  padding: 20px; /* Add padding inside the grid */
 }
-  
+
 .portfolio-card {
   display: flex;
-  max-width: 700px;
   flex-direction: column;
   background-color: #1a1a1a; /* Dark background */
   padding: 20px;
@@ -962,7 +962,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%; /* Ensure all cards have the same height */
 }
-  
+
 .portfolio-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
@@ -986,7 +986,6 @@ body {
   flex: 1; /* Allow title to take available space */
 }
 
-  
 .portfolio-tech {
   font-size: 14px;
   font-weight: bold;
@@ -995,7 +994,6 @@ body {
   text-align: left; /* Align to the left */
 }
 
-  
 .portfolio-description {
   font-size: 16px;
   color: #b0b0b0; /* Light gray text */
@@ -1013,129 +1011,116 @@ body {
   position: relative; /* For positioning the image */
 }
 
-  
-  /* Image Container */
-  .portfolio-card > div {
-    display: flex;
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-    margin-bottom: 5px;
-  }
-  
-  /* Make Images Bigger */
-  .icon_tech_g {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image fills the container without distortion */
-    transition: transform 0.3s ease;
-  }
-  .portfolio-card:hover .icon_tech_g {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  }
-  .portfolio-button-area {
-    text-align: center; /* Center the button */
-  }
-  
-  .portfolio-btn {
-    display: inline-block;
-    padding: 15px 44px;
-    background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
-    color: #1a1a1a; /* Dark text */
-    border: none;
-    border-radius: 30px; /* Rounded corners */
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 10px auto; /* Center the button horizontally */
-    display: block; /* Ensure the button takes full width of its container */
-  }
-  
-  /* If the button is inside a flex container */
-  .button-container {
-    display: flex;
-    justify-content: center; /* Center the button horizontally */
-    align-items: center; /* Center the button vertically (if needed) */
-  }
-  
-  .portfolio-btn:hover {
-    background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient on hover */
-    transform: translateY(-3px); /* Slight lift */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-  
-  
-  .portfolio-btn:active {
-    transform: translateY(0); /* Reset lift on click */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
-  }
-  .portfolio-btn::after {
-    margin-left: 10px;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .portfolio-btn:hover::after {
-    transform: translateX(5px); /* Move arrow to the right on hover */
-  }
-  
-  /* View More Button */
-  .Port-btn {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .port-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
-    color: #1a1a1a; /* Dark text */
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .port-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  /* Pagination */
-  .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-  }
-  
-  .page-btn {
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #225726, #046d07); /* Green gradient */
-    color: #1a1a1a; /* Dark text */
-    border: none;
-    border-radius: 30px; /* Rounded corners like .portfolio-btn */
-    font-size: 15px;
-    font-weight: 600; /* Match font weight */
-    text-transform: uppercase; /* Match text transform */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
-  .page-btn:hover {
-    background: linear-gradient(45deg, #4CAF50, #45a049); /* Reverse gradient on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-  }
-  
-  .page-btn.active {
-    background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient for active page */
-    color: #1a1a1a; /* Dark text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
+.icon_tech_g {
+  padding-bottom: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the container without distortion */
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .icon_tech_g {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.portfolio-button-area {
+  text-align: center; /* Center the button */
+}
+
+.portfolio-btn {
+  display: inline-block;
+  padding: 15px 44px;
+  background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
+  color: #1a1a1a; /* Dark text */
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 10px auto; /* Center the button horizontally */
+  display: block; /* Ensure the button takes full width of its container */
+}
+
+.portfolio-btn:hover {
+  background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient on hover */
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.portfolio-btn:active {
+  transform: translateY(0); /* Reset lift on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}
+
+.portfolio-btn::after {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-btn:hover::after {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+}
+
+/* View More Button */
+.Port-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.port-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background */
+  color: #1a1a1a; /* Dark text */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.port-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.page-btn {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #225726, #046d07); /* Green gradient */
+  color: #1a1a1a; /* Dark text */
+  border: none;
+  border-radius: 30px; /* Rounded corners like .portfolio-btn */
+  font-size: 15px;
+  font-weight: 600; /* Match font weight */
+  text-transform: uppercase; /* Match text transform */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.page-btn:hover {
+  background: linear-gradient(45deg, #4CAF50, #45a049); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.page-btn.active {
+  background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient for active page */
+  color: #1a1a1a; /* Dark text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .portfolio {
@@ -1145,12 +1130,12 @@ body {
   }
 
   .portfolio-heading {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 2.5rem; /* Smaller font size for mobile */
   }
 
   .portfolio-grid {
     grid-template-columns: 1fr; /* 1 column on mobile */
-    gap: 20px;
+    gap: 20px; /* Consistent gap between items */
   }
 
   .portfolio-card {
@@ -1158,21 +1143,21 @@ body {
   }
 
   .portfolio-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .portfolio-tech {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .portfolio-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .portfolio-btn,
   .page-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
@@ -1615,7 +1600,7 @@ body {
   }
   
   .my-projects:hover {
-    background: linear-gradient(45deg, #06ad0e, #ffd000); /* Reverse gradient on hover */
+    background: linear-gradient(45deg, #00ff0d, #ffd000); /* Reverse gradient on hover */
     transform: translateY(-2px); /* Slight lift effect */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
   }
@@ -1636,6 +1621,7 @@ body {
   padding-left: 90px;
   margin: 0 auto;
 }
+
 
 .grid-ab {
   display: grid;
