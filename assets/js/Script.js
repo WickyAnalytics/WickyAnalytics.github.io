@@ -123,16 +123,27 @@ document.querySelectorAll('.scroll-link').forEach(link => {
     const timelineEvents = document.querySelectorAll(".timeline-event");
     const descriptionContainer = document.querySelector(".timeline-descriptions");
   
+    // Add default text when the page loads
+    descriptionContainer.innerHTML = `<p class="default-text">Click on a circle to view details.</p>`;
+  
     timelineEvents.forEach((event) => {
       event.addEventListener("click", () => {
         const year = event.getAttribute("data-year");
         const degree = event.querySelector(".text-small").textContent;
   
+        // Remove active class from all circles
+        timelineEvents.forEach((e) => {
+          e.querySelector(".circle").classList.remove("active-circle");
+        });
+  
+        // Add active class to the clicked circle
+        event.querySelector(".circle").classList.add("active-circle");
+  
+        // Update description content
         const descriptionContent = `
           <h3>${year} - "${degree}"</h3>
           ${getDescriptionForYear(year)}
         `;
-  
         descriptionContainer.innerHTML = descriptionContent;
       });
     });
@@ -169,4 +180,26 @@ document.querySelectorAll('.scroll-link').forEach(link => {
           return "<p>No description available.</p>";
       }
     }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("click"); // Get the checkbox
+    const navLinks = document.querySelectorAll(".header-ul .nav-link"); // Get all menu links
+  
+    // Add click event listeners to all menu links
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Uncheck the checkbox to close the menu
+        checkbox.checked = false;
+  
+        // Smooth scroll to the target section
+        const targetId = link.getAttribute("href"); // Get the target section ID
+        if (targetId.startsWith("#")) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+    });
   });

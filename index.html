@@ -16,32 +16,42 @@
 <body>
 	<div class="loader_bg" style="display: none;">
 		<div class="loader"></div>
-</div>
-<!-- Header -------------------------------------------------->
-<header class="container-new">
-    <div class="page-header-new">
-    <!-- Logo -->
-    <div class="logo-new">
-		<a href="#" class="logo-link">WickyAnalytics</a>
-	</div>
-
-    <!-- Mobile Menu Toggle -->
-    <input type="checkbox" id="click">
-    <label for="click" class="mainicon">
-		<div class="menu-new">
-			<i class="bx bx-menu"></i> <!-- FontAwesome hamburger icon -->
+	  </div>
+	  
+	  <!-- Header -------------------------------------------------->
+	  <header class="container-new">
+		<div class="page-header-new">
+		  <!-- Logo -->
+		  <div class="logo-new">
+			<a href="#" class="logo-link">WickyAnalytics</a>
+		  </div>
+	  
+		  <!-- Mobile Menu Toggle -->
+		  <input type="checkbox" id="click">
+<label for="click" class="mainicon">
+  <div class="menu-new">
+    <!-- SVG Hamburger Icon -->
+    <svg class="hamburger-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Top Line -->
+      <rect class="line top" x="5" y="10" width="30" height="4" fill="#ffd109" rx="2" />
+      <!-- Middle Line -->
+      <rect class="line middle" x="5" y="18" width="30" height="4" fill="#ffd109" rx="2" />
+      <!-- Bottom Line -->
+      <rect class="line bottom" x="5" y="26" width="30" height="4" fill="#ffd109" rx="2" />
+    </svg>
+  </div>
+</label>
+	  
+		  <!-- Navbar Links --------------------------------------------------------->
+		  <ul class="header-ul">
+			<li><a href="#about" class="scroll-link nav-link">About</a></li>
+			<li><a href="#skills" class="scroll-link nav-link">Skills</a></li>
+			<li><a href="#services" class="scroll-link nav-link">Services</a></li> <!-- New Services Link -->
+			<li><a href="https://drive.google.com/file/d/1XLSVioIjx-NRXSr6GSMJye1feVwmtsOy/view?usp=drive_link" target="_blank" class="no-scroll nav-link">Resume</a></li>
+			<li><a href="#contact" class="lets_talk_btn scroll-link nav-link">Let's Talk</a></li>
+		  </ul>
 		</div>
-	  </label>
-
-    <!-- Navbar Links --------------------------------------------------------->
-    <ul class="header-ul">
-		<li><a href="#about" class="scroll-link nav-link">About</a></li>
-		<li><a href="#skills" class="scroll-link nav-link">Skills</a></li>
-		<li><a href="https://drive.google.com/file/d/1XLSVioIjx-NRXSr6GSMJye1feVwmtsOy/view?usp=drive_link" target="_blank" class="no-scroll nav-link">Resume</a></li>
-		<li><a href="#contact" class="lets_talk_btn scroll-link nav-link">Let's Talk</a></li>
-	  </ul>
-    </div>
-</header>
+	  </header>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -96,6 +106,40 @@
 	  </div>
 	</div>
   </section>
+
+  <section class="services" id="services">
+	<div class="container">
+	  <h2 class="services-heading">My Responsibilities</h2>
+	  <div class="services-grid">
+		<div class="service-card">
+		  <h3 class="service-title">Data Cleaning and Preparation</h3>
+		  <p class="service-description">
+			I clean and prepare raw data to ensure it is accurate, consistent, and ready for analysis. This includes handling missing values, removing duplicates, and transforming data into a usable format.
+		  </p>
+		</div>
+		<div class="service-card">
+		  <h3 class="service-title">Data Visualization and Dashboard Creation</h3>
+		  <p class="service-description">
+			I create interactive and visually appealing dashboards using tools like Tableau, Power BI, and Python libraries (e.g., Matplotlib, Seaborn) to help stakeholders understand data insights at a glance.
+		  </p>
+		</div>
+		<div class="service-card">
+		  <h3 class="service-title">Reporting and Insights Delivery</h3>
+		  <p class="service-description">
+			I deliver actionable insights through detailed reports and presentations, tailored to the needs of stakeholders. My reports are clear, concise, and focused on driving decision-making.
+		  </p>
+		</div>
+		<div class="service-card">
+		  <h3 class="service-title">SQL Database Querying and Optimization</h3>
+		  <p class="service-description">
+			I write efficient SQL queries to extract, manipulate, and analyze data from relational databases. I also optimize database performance for faster query execution.
+		  </p>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+
 <!-- About Me Section ------------------------------------------------------------------------------>
 <section class="section-about-me-ab" id="about">
 	<div class="container-ab grid-ab">
@@ -145,8 +189,8 @@
 			  <g class="timeline-event" data-year="2024">
 				<circle class="circle" cx="450" cy="50" r="12" fill="#000"></circle>
 				<text class="text" x="450" y="90" fill="#ffd109">2024</text>
-				<text class="text-small" x="300" y="30" fill="#fff">Master's Degree</text>
-				<text class="text-small" x="300" y="80" fill="#fff">Helwan University</text>
+				<text class="text-small" x="250" y="30" fill="#fff">Master's Degree</text>
+				<text class="text-small" x="250" y="80" fill="#fff">Helwan University</text>
 			  </g>
   
 			  <!-- 2025 -->
@@ -154,7 +198,7 @@
 				<circle class="circle" cx="700" cy="50" r="12" fill="#000"></circle>
 				<text class="text" x="700" y="90" fill="#ffd109">2025</text>
 				<text class="text-small" x="520" y="30" fill="#fff">Thesis Completion</text>
-				<text class="text-small" x="520" y="70" fill="#fff">Software Engineering</text>
+				<text class="text-small" x="520" y="80" fill="#fff">Software Engineering</text>
 			  </g>
 			</svg>
 		  </div>
@@ -185,7 +229,7 @@
 			  <g class="timeline-event" data-year="2025">
 				<circle class="circle" cx="150" cy="400" r="12" fill="#000"></circle>
 				<text class="text" x="110" y="405" fill="#ffd109">2025</text>
-				<text class="text-small" x="47" y="325" fill="#fff">Thesis Completion</text>
+				<text class="text-small" x="18" y="325" fill="#fff">Thesis Completion</text>
 				<text class="text-small" x="162" y="325" fill="#fff">Software Engineering</text>
 			  </g>
 			</svg>
@@ -431,7 +475,7 @@
 			  <p class="portfolio-description">
 				Tracked and analyzed progress for a gaming agency using Google Sheets.
 			  </p>
-			  <a href="https://github.com/WickyAnalytics/HrProject-Sql-powerBi-Tableau-Excel" class="portfolio-btn">Details →</a>
+			  <a href="https://github.com/WickyAnalytics/static-Raid-magment-porject" class="portfolio-btn">Details →</a>
 			</div>
 		  </div>
 		</div>
@@ -445,6 +489,7 @@
 	  </section>
 	</div>
   </div>
+
 
   <!-- Contact Section -->
 <section class="contact_container___CE5a" id="contact">
