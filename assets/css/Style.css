@@ -1218,6 +1218,8 @@ body {
   border-radius: 30px; /* Rounded corners */
   font-size: 15px;
   font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: 500px;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
