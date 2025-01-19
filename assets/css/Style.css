@@ -58,10 +58,10 @@
 
 /* Menu Links */
 .header-ul .nav-link {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: #e0e0e0; /* Light text */
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 5px;
   transition: color 0.3s ease;
 }
 
@@ -490,8 +490,7 @@ body {
   }
   
   .hero-content h1 {
-    font-size: 79px;
-    margin: 10px 0;
+    font-size: 59px;
     line-height: 1.2;
 }
 
@@ -1024,7 +1023,7 @@ body {
   color: #b0b0b0;
   letter-spacing: -0.5px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .heading-secondary {
   font-size: 1.7rem;
@@ -1159,9 +1158,10 @@ body {
 }
 
 .portfolio-title {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  padding: 10px 10px;
   text-align: center;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   font-weight: bold;
   color: #ffd109; /* Yellow for titles */
   margin: 0; /* Remove default margin */
@@ -1211,7 +1211,6 @@ body {
 }
 
 .portfolio-btn {
-  display: inline-block; /* Keep it inline-block to shrink to content */
   padding: 20px 30px; /* Reduced padding for a smaller button */
   background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
   color: #1a1a1a; /* Dark text */
@@ -1275,7 +1274,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .page-btn {
@@ -1331,7 +1330,7 @@ body {
 
   .portfolio-title {
     font-size: 2.2rem;
-    text-align: center;
+    text-align: left;
   }
 
   .portfolio-tech {
@@ -1354,42 +1353,182 @@ body {
 }
 
   /* Contact Section-----------------------------------------------------*/
-  .contact {
-    padding: 50px;
-    background-color: #1a1a1a; /* Dark background */
+  /* Base Styles */
+/* Base Styles */
+.contact {
+  padding: 50px 0px 150px;
+  background-color: var(--color-4); /* Dark background */
+  position: relative;
+}
+
+.contact_wrapper__tvaVr {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contact Heading Container */
+.contact-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between heading and image */
+  margin-bottom: 20px;
+}
+
+.contact_wrapper__tvaVr h1 {
+  font-size: 60px;
+  color: var(--text-color-3);
+  margin: 0; /* Remove default margin */
+  text-align: center;
+  z-index: 2;
+}
+
+.contact_object__VBBQI {
+  width: 80px; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+  animation: float 3s ease-in-out infinite; /* Add a floating animation */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
-  
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .contact input, .contact textarea {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #333; /* Darker border */
-    border-radius: 5px;
-    background-color: #333; /* Darker background */
-    color: #e0e0e0; /* Light text */
+  100% {
+    transform: translateY(0);
   }
-  
+}
+
+.contact_heading {
+  font-size: 18px;
+  color: #e0e0e0; /* Light text */
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+  height: 60px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333; /* Darker border */
+  border-radius: 10px;
+  background-color: #333; /* Darker background */
+  color: #e0e0e0; /* Light text */
+  font-family: inherit; /* Match the font family of the form */
+}
+
+.contact textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px;
+}
+
+.contact button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4dff00; /* Green background */
+  color: #1a1a1a; /* Dark text */
+  border: none;
+  border-color: rgba(239, 241, 246, 0.192);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #ffd000; /* Darker green on hover */
+}
+
+/* Dropdown Styling */
+.contact select {
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e0e0e0'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.contact select:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none;
+}
+
+/* Placeholder Option Styling */
+.contact select option[disabled] {
+  color: #888; /* Gray color for the placeholder text */
+}
+
+.contact select option {
+  background-color: #333; /* Dark background for options */
+  color: #e0e0e0; /* Light text for options */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .contact_wrapper__tvaVr h1 {
+    font-size: 40px; /* Smaller font size for mobile */
+  }
+
+  .contact_heading {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact select {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 8px; /* Smaller padding for mobile */
+  }
+
   .contact button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #4CAF50; /* Green background */
-    color: #1a1a1a; /* Dark text */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 8px; /* Smaller padding for mobile */
   }
-  
-  .contact button:hover {
-    background-color: #45a049; /* Darker green on hover */
+
+  .contact_object__VBBQI {
+    width: 60px; /* Smaller image for mobile */
   }
+
+  .contact-heading-container {
+    gap: 10px; /* Reduce space between heading and image */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact_wrapper__tvaVr h1 {
+    font-size: 50px; /* Adjusted font size for tablets */
+  }
+
+  .contact_heading {
+    font-size: 17px; /* Adjusted font size for tablets */
+  }
+
+  .contact_object__VBBQI {
+    width: 70px; /* Adjusted image size for tablets */
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact_wrapper__tvaVr h1 {
+    font-size: 55px; /* Adjusted font size for smaller desktops */
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .contact_wrapper__tvaVr h1 {
+    font-size: 60px; /* Adjusted font size for larger screens */
+  }
+}
   
   /* Footer */
   .custom-shape-divider-bottom-1652512758 .shape-fill {
@@ -1819,6 +1958,7 @@ body {
   grid-template-columns: 30% 70%; /* Image takes 30%, right container takes 70% */
   gap: 30px;
   padding-top: 2px;
+  padding-left: 40px;
   width: 100%; /* Ensure it takes full width */
 }
 
@@ -1833,7 +1973,6 @@ body {
   max-width: 400px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -2179,5 +2318,152 @@ body {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+/* Filter Section */
+/* Filter Section */
+.container-f {
+  position: relative;
+  max-width: 300px;
+  margin: 20px auto;
+}
 
-  
+.select-btn-f {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.select-btn-f:hover {
+  background-color: #333;
+}
+
+.select-btn-f .arrow-dwn-f {
+  transition: transform 0.3s ease;
+}
+
+.select-btn-f.open .arrow-dwn-f {
+  transform: rotate(180deg);
+}
+
+.list-items-f {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  display: none;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.list-items-f.show {
+  display: block;
+}
+
+.item-f {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item-f:hover {
+  background-color: #333;
+}
+
+.checkbox-f {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease;
+}
+
+.check-icon {
+  display: none;
+  font-size: 12px;
+  color: #4CAF50;
+}
+
+.item-f.selected .check-icon {
+  display: inline-block;
+}
+
+.item-f.selected .checkbox-f {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.item-text-f {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+/* Highlight selected filters */
+.item-f.checked {
+  background-color: #333; /* Darker background for selected items */
+}
+
+.item-f.checked .checkbox-f {
+  background-color: #4CAF50; /* Green background for checkbox */
+  border-color: #4CAF50;
+}
+
+.item-f.checked .check-icon {
+  display: inline-block; /* Show checkmark */
+}
+
+/* Style for the filter buttons */
+.filter-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.apply-filter-btn,
+.clear-filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-filter-btn {
+  background: linear-gradient(45deg, #4CAF50, #00ff0d);; /* Blue background */
+  color: white;
+}
+
+.apply-filter-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.clear-filter-btn {
+  background-color: #ffcccc; /* Light red background */
+  color: #333;
+}
+
+.clear-filter-btn:hover {
+  background-color: #ff9999; /* Lighter red on hover */
+  transform: translateY(-2px);
+}
+
