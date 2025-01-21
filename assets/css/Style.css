@@ -677,7 +677,7 @@ body {
 }
 
 .services-heading {
-  font-size: 3rem; /* Larger heading for emphasis */
+  font-size: 50px; /* Larger heading for emphasis */
   text-align: center;
   margin-bottom: 4rem; /* Increased spacing below heading */
   color: #ffd109; /* Yellow for heading */
