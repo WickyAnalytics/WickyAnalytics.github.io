@@ -671,7 +671,7 @@ body {
 /* Services Section */
 /* Services Section */
 .services {
-  padding: 25px 0; /* Generous padding for a spacious feel */
+  padding: 0px 0; /* Generous padding for a spacious feel */
   background-color: #1a1a1a; /* Dark background */
   color: #e0e0e0; /* Light text */
 }
@@ -745,6 +745,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .services {
+    padding: 50px 0; /* Generous padding for a spacious feel */
+  }
   .services-heading {
     font-size: 40px; /* Smaller heading on mobile */
   }
@@ -767,6 +770,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .services {
+    padding: 50px 0; /* Generous padding for a spacious feel */
+  }
   .services-grid {
     grid-template-columns: 1fr; /* Single column on small screens */
   }
