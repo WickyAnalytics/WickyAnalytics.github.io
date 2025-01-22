@@ -32,7 +32,7 @@ scrollToTopButton.addEventListener('click', () => {
 
 // Typewriter Effect
 const typewriter = document.querySelector('.typewriter');
-const textArray = ["Hello!", "Hola!", "Bonjour!", "Hallo!", "Ciao!", "Olá!"];
+const textArray = ["Hello!", "Hola!", "Bonjour!", "Hallo!", "Ciao!", "Olá!","مرحبا"];
 let textIndex = 0;
 let charIndex = 0;
 
@@ -82,6 +82,14 @@ function showPage(pageNumber) {
       button.classList.remove('active');
     }
   });
+}
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    console.error(`Element with ID "${elementId}" not found.`);
+  }
 }
 
 // Event listeners for pagination buttons

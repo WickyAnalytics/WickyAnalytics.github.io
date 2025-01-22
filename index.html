@@ -45,8 +45,8 @@
 		  <!-- Navbar Links --------------------------------------------------------->
 		  <ul class="header-ul">
 			<li><a href="#about" class="scroll-link nav-link">About</a></li>
-			<li><a href="#skills" class="scroll-link nav-link">Skills</a></li>
 			<li><a href="#services" class="scroll-link nav-link">Services</a></li> <!-- New Services Link -->
+			<li><a href="#skills" class="scroll-link nav-link">Skills</a></li>
 			<li><a href="https://drive.google.com/file/d/1XLSVioIjx-NRXSr6GSMJye1feVwmtsOy/view?usp=drive_link" target="_blank" class="no-scroll nav-link">Resume</a></li>
 			<li><a href="#contact" class="lets_talk_btn scroll-link nav-link">Let's Talk</a></li>
 		  </ul>
@@ -311,12 +311,16 @@
 			<p class="portfolio-title">Excel</p>
 		  </div>
 		  <div class="skill-item">
-			<img loading="lazy" class="skill-item-img" src="/images/skills/pandas.svg" alt="Pandas icon">
-			<p class="portfolio-title">Pandas</p>
+			<img loading="lazy" class="skill-item-img" src="/images/skills/sheets-seeklogo.png" alt="Pandas icon">
+			<p class="portfolio-title">Google Sheets</p>
 		  </div>
 		  <div class="skill-item">
-			<img loading="lazy" class="skill-item-img" src="/images/skills/numpy.png" alt="Numpy icon">
-			<p class="portfolio-title">Numpy</p>
+			<img loading="lazy" class="skill-item-img" src="/images/skills/jupyter.png" alt="Jupyter Notebook icon">
+			<p class="portfolio-title">Jupyter Notebook</p>
+		  </div>
+		  <div class="skill-item">
+			<img loading="lazy" class="skill-item-img" src="/images/skills/vs.png" alt="Jupyter Notebook icon">
+			<p class="portfolio-title">Visual Studio Code</p>
 		  </div>
 		</div>
 	  </div>
@@ -326,12 +330,30 @@
 		<h3 class="skills-category">Data Visualization</h3>
 		<div class="skills-list">
 		  <div class="skill-item">
+			<img loading="lazy" class="skill-item-img" src="/images/skills/PowerBI.png" alt="PowerBI icon">
+			<p class="portfolio-title">PowerBI</p>
+		  </div>
+		  <div class="skill-item">
 			<img loading="lazy" class="skill-item-img" src="/images/skills/Tableau.png" alt="Tableau icon">
 			<p class="portfolio-title">Tableau</p>
 		  </div>
 		  <div class="skill-item">
-			<img loading="lazy" class="skill-item-img" src="/images/skills/PowerBI.png" alt="PowerBI icon">
-			<p class="portfolio-title">PowerBI</p>
+			<img loading="lazy" class="skill-item-img" src="/images/skills/google-looker-seeklogo.png" alt="PowerBI icon">
+			<p class="portfolio-title">Docker</p>
+		  </div>
+		</div>
+	  </div>
+	  <!-- Additional Skills -->
+	  <div class="skills-container">
+		<h3 class="skills-category">Additonal</h3>
+		<div class="skills-list">
+		  <div class="skill-item">
+			<img loading="lazy" class="skill-item-img" src="/images/skills/WhiteGithub.png" alt="Tableau icon">
+			<p class="portfolio-title">Github</p>
+		  </div>
+		  <div class="skill-item">
+			<img loading="lazy" class="skill-item-img" src="/images/skills/figma.png" alt="PowerBI icon">
+			<p class="portfolio-title">Figma</p>
 		  </div>
 		</div>
 	  </div>
@@ -339,74 +361,81 @@
   </section>
 
 <!-- Portfolio Section -->
-<!-- Portfolio Section -->
 <div id="section-portfolio" class="section-portfolio">
 	<div class="container-pt" id="Portfolio">
 	  <section id="portfolio" class="portfolio">
-		<span class="subheading_pt">Portfolio</span>
-		<h2 class="heading-secondary">Some previous projects, but I am eager to take on more.</h2>
-  
-		<!-- Filter Section -->
-		<div class="container-f">
-			<!-- Filter Dropdown Button -->
-			<div class="select-btn-f">
-			  <span class="btn-text-f">Tech Filter</span>
-			  <span class="arrow-dwn-f">
-				<i class="fa-solid fa-chevron-down"></i>
-			  </span>
-			</div>
-			<!-- Filter Options List -->
-			<ul class="list-items-f">
-			  <!-- Excel -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">Excel</span>
-			  </li>
-			  <!-- Power BI -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">Power BI</span>
-			  </li>
-			  <!-- Tableau -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">Tableau</span>
-			  </li>
-			  <!-- Google Sheets -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">Google Sheets</span>
-			  </li>
-			  <!-- SQL -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">SQL</span>
-			  </li>
-			  <!-- Python -->
-			  <li class="item-f">
-				<span class="checkbox-f">
-				  <i class="fa-solid fa-check check-icon"></i>
-				</span>
-				<span class="item-text-f">Python</span>
-			  </li>
-			</ul>
+		<!-- Top Part Layout -->
+		<div class="portfolio-top">
+		  <!-- Heading and Subheading -->
+		  <div class="portfolio-heading">
+			<span class="subheading_pt">Portfolio</span>
+			<h2 class="heading-secondary">Some previous projects, but I am eager to take on more.</h2>
 		  </div>
   
-  <!-- Filter Buttons -->
-  <div class="filter-buttons">
-	<button class="apply-filter-btn">Apply Filter</button>
-	<button class="clear-filter-btn">Clear Filters</button>
-  </div>
+		  <!-- Filter Section -->
+		  <div class="filter-section">
+			<!-- Filter Dropdown Button -->
+			<div class="container-f">
+			  <div class="select-btn-f">
+				<span class="btn-text-f">Tech Filter</span>
+				<span class="arrow-dwn-f">
+				  <i class="fa-solid fa-chevron-down"></i>
+				</span>
+			  </div>
+			  <!-- Filter Options List -->
+			  <ul class="list-items-f">
+				<!-- Excel -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">Excel</span>
+				</li>
+				<!-- Power BI -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">Power BI</span>
+				</li>
+				<!-- Tableau -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">Tableau</span>
+				</li>
+				<!-- Google Sheets -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">Google Sheets</span>
+				</li>
+				<!-- SQL -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">SQL</span>
+				</li>
+				<!-- Python -->
+				<li class="item-f">
+				  <span class="checkbox-f">
+					<i class="fa-solid fa-check check-icon"></i>
+				  </span>
+				  <span class="item-text-f">Python</span>
+				</li>
+			  </ul>
+			</div>
+  
+			<!-- Filter Buttons -->
+			<div class="filter-buttons">
+			  <button class="apply-filter-btn">Apply Filter</button>
+			  <button class="clear-filter-btn">Clear Filters</button>
+			</div>
+		  </div>
+		</div>
 		  
   
   <div class="portfolio-grid">

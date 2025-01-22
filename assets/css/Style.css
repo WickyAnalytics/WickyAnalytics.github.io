@@ -671,7 +671,7 @@ body {
 /* Services Section */
 /* Services Section */
 .services {
-  padding: 50px 0; /* Generous padding for a spacious feel */
+  padding: 25px 0; /* Generous padding for a spacious feel */
   background-color: #1a1a1a; /* Dark background */
   color: #e0e0e0; /* Light text */
 }
@@ -943,9 +943,10 @@ body {
 }
 
 .skill-item img {
-  width: 80px; /* Increase icon size */
-  height: 80px;
+  width: 60px; /* Fixed width for all images */
+  height: 60px; /* Fixed height for all images */
   margin-right: 1.5rem; /* Increase space between icon and text */
+  object-fit: contain; /* Ensure images scale proportionally without stretching */
 }
 
 .skill-item p {
@@ -1015,61 +1016,169 @@ body {
 }
   
   /* Portfolio Section -----------------------------------------------------------------------------*/
-  
-  .heading-secondary {
-    font-weight: 700;
-    color: #b0b0b0;
-    letter-spacing: -0.5px;
-    text-align: center;
-    padding-bottom: 10px;
+  .section-portfolio {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 0rem 0;
   }
+  
+  .container-pt {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 3.4rem;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .portfolio {
+    padding: 40px 0;
+    background-color: #333;
+    margin-top: 4.6rem;
+  }
+  
+  /* Portfolio Top Part Layout */
+  .portfolio-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+  
+  .portfolio-heading {
+    text-align: left;
+    margin-right: 2rem;
+    padding-left: 40px; /* Push subheading and heading to the right */
+  }
+  
+  .subheading_pt {
+    display: block;
+    color: #ffd109;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.75px;
+    font-size: 70px; /* Increased font size */
+    font-weight: 700;
+  }
+  
   .heading-secondary {
     font-size: 1.7rem;
     line-height: 1.2;
-  }
-  .subheading_pt {
-    padding-top: 10px;
-    display: block;
-    font-size: 1.6rem;
+    color: #b0b0b0;
     font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: left; /* Align heading-secondary to the left */
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+  }
+  
+  /* Filter Dropdown */
+  .container-f {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+  }
+  
+  .select-btn-f {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    background-color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .select-btn-f:hover {
+    background-color: #444;
+  }
+  
+  .btn-text-f {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  
+  .arrow-dwn-f {
+    margin-left: 0.5rem;
+    color: #e0e0e0;
+  }
+  
+  .list-items-f {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 10;
+  }
+  
+  .list-items-f.active {
+    display: block;
+  }
+  
+  .item-f {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item-f:hover {
+    background-color: #444;
+  }
+  
+  .checkbox-f {
+    margin-right: 0.8rem;
+  }
+  
+  .check-icon {
     color: #ffd109;
-    margin-bottom: 1.6rem;
-    letter-spacing: 0.75px;
-    text-align: center;
-    font-size: 50px;
-}
-.section-portfolio {
-  background-color: #1a1a1a; /* Dark background */
-  color: #e0e0e0; /* Light text */
-}
+    font-size: 0.9rem;
+  }
+  
+  .item-text-f {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    z-index: 20;
+  }
+  
+  .apply-filter-btn,
+  .clear-filter-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #ffd109;
+    border: none;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-filter-btn:hover,
+  .clear-filter-btn:hover {
+    background-color: #e6b800;
+  }
 
-.container-pt {
-  max-width: 1900px; /* Limit container width for better readability */
-  margin: 0 auto; /* Center the container */
-  padding: 0 0px; /* Add padding inside the container */
-  background-color: #2a2a2a; /* Slightly lighter dark background */
-  border-radius: 10px; /* Rounded corners for the container */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-.portfolio {
-  padding: 40px 0; /* Adjusted padding */
-  background-color: #333; /* Darker background */
-  color: #e0e0e0; /* Light text */
-  text-align: center;
-  margin-top: 4.6rem;
-}
-
-.portfolio-heading {
-  display: block;
-  font-size: 3.5rem; /* Adjusted for consistency */
-  font-weight: 700;
-  color: #ffd109; /* Yellow accent */
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
-  text-align: center;
-}
-
+/* Portfolio Grid */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr)); /* 2 columns at most */
@@ -1155,20 +1264,20 @@ body {
 
 .portfolio-btn {
   padding: 20px 30px; /* Reduced padding for a smaller button */
-  background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
+  background: linear-gradient(145deg, #4CAF50, #ffd000); /* Green gradient */
   color: #1a1a1a; /* Dark text */
   border: none;
   border-radius: 30px; /* Rounded corners */
   font-size: 15px;
   font-weight: 600;
-  padding: 0.8rem 1.2rem;
+  padding: 1.5rem 9.2rem;
   border-radius: 500px;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin: 10px 0 0px auto; /* Push the button to the right */
+  margin: 15px 0 0px auto; /* Push the button to the right */
   float: right; /* Alternative to margin-left: auto */
 }
 
@@ -1249,53 +1358,98 @@ body {
 }
 
 /* Media Queries for Mobile Devices */
+
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-  .portfolio {
-    padding: 20px;
-    margin-top: 5rem;
-    margin-bottom: 0rem;
+  /* General Adjustments */
+  .container-pt {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
+  /* Portfolio Top Section */
+  .portfolio-top {
+    flex-direction: column; /* Stack heading and filter vertically */
+    align-items: center; /* Center-align items */
+    text-align: center; /* Center text */
   }
 
   .portfolio-heading {
-    font-size: 2.5rem; /* Smaller font size for mobile */
+    text-align: center;
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below heading */
   }
 
+  .subheading_pt {
+    padding-top: 10px;
+    left: 0; /* Remove left shift */
+  }
+
+  .heading-secondary {
+    text-align: center; /* Center-align text */
+  }
+
+  /* Filter Section */
+  .filter-section {
+    flex-direction: column; /* Stack filter dropdown and buttons vertically */
+    align-items: center; /* Center-align items */
+    gap: 10px; /* Reduce gap between elements */
+  }
+
+  .container-f {
+    width: 100%; /* Full width for dropdown */
+  }
+
+  .select-btn-f {
+    width: 100%; /* Full width for dropdown button */
+  }
+
+  .filter-buttons {
+    width: 100%; /* Full width for buttons */
+    justify-content: center; /* Center-align buttons */
+  }
+
+  .apply-filter-btn,
+  .clear-filter-btn {
+    width: 48%; /* Equal width for buttons */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  /* Portfolio Grid */
   .portfolio-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-    gap: 20px; /* Consistent gap between items */
-    padding: 0px;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Reduce gap between cards */
+    padding: 0; /* Remove padding */
   }
 
   .portfolio-card {
-    display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically (optional) */
-}
+    padding: 15px; /* Reduce padding */
+  }
 
   .portfolio-title {
-    font-size: 2.2rem;
-    text-align: left;
+    font-size: 2.5rem; /* Reduce font size */
+    text-align: center; /* Center-align title */
   }
 
   .portfolio-tech {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduce font size */
+    text-align: center; /* Center-align tech stack */
   }
 
   .portfolio-description {
-    padding-top: 5px;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Reduce font size */
+    text-align: center; /* Center-align description */
   }
 
-  .portfolio-btn,
-  .page-btn {
-    font-size: 1rem;
-    padding: 12px 30px; /* Increased padding for a wider button */
-    width: auto; /* Ensure the button doesn't stretch to full width */
-    display: inline-block; /* Keep it inline-block for proper sizing */
-    margin: 10px 0; /* Adjust margin if needed */
+  .portfolio-btn {
+    align-content: center;
+    text-align: center;
+    height: 50px;
+    width: 100%; /* Full width for button */
+    font-size: 1.5rem; /* Reduce font size */
+    margin: 10px 0; /* Add margin */
   }
 }
+
 
   /* Contact Section-----------------------------------------------------*/
   /* Base Styles */
@@ -2379,6 +2533,13 @@ body {
 }
 
 /* Style for the filter buttons */
+.filter-section {
+  display: flex;
+  justify-content: center; /* Center the filter section */
+  align-items: center;
+  gap: 2rem; /* Space between filter dropdown and buttons */
+}
+
 .filter-buttons {
   margin-top: 10px;
   display: flex;
