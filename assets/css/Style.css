@@ -855,235 +855,178 @@ body {
 
   
   /* Skills Section */
+/* Skills Section */
 .container_sk {
   padding: 0 6.4rem;
   margin: 0 auto;
+  max-width: 1500px; /* Set maximum width to 1500px */
+  width: 100%; /* Ensure it takes full width up to 1500px */
 }
 
 .section-skills {
   position: relative;
   background-color: #1a1a1a;
-  padding-top: 7.2rem;
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
 }
 
-
-@media (max-width: 69rem) {
-  .grid {
-    column-gap: 5.5rem;
-  }
-}
-@media (max-width: 60rem) {
-  .grid {
-    column-gap: 4.8rem;
-  }
-  
-  .heading-secondary {
-    font-size: 3.2rem;
-  }
-  .portfolio-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-}
-@media (max-width: 36.5rem) {
-  .my-5 {
-    margin-top: 3.4rem;
-  }
-  .heading-secondary {
-    font-size: 2.4rem;
-  }
-  .subheading_sk {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-}
-@media (max-width: 34rem) {
-  .heading-secondary {
-    font-size: 2.8rem;
-  }
-  .container_sk {
-    padding: 0 2.4rem;
-  }
-}
-@media (max-width: 26.5rem) {
-  .heading-secondary {
-    font-size: 2.5rem;
-  }
-  .container_sk {
-    padding: 0 1.3rem;
-  }
-}
-@media (max-width: 68.75rem) {
-  .grid {
-    column-gap: 5.4rem;
-    row-gap: 4.6rem;
-  }
-  .section-portfolio .grid {
-    padding-inline: 3.4rem;
-  }
-}
-@media (max-width: 62.5rem) {
-  .heading-secondary {
-    font-size: 3.2rem;
-  }
-  .subheading_sk {
-    font-size: 1.5rem;
-    margin-bottom: 1.4rem;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, 1fr);
-  }
-  .section-portfolio .grid {
-    column-gap: 4.4rem;
-    padding-inline: 0;
-  }
-}
-@media (max-width: 52rem) {
-  .heading-secondary {
-    font-size: 2.7rem;
-  }
-  .subheading_sk {
-    font-size: 1.4rem;
-    margin-bottom: 1.4rem;
-  }
-  .section-skills svg {
-    height: 64px;
-    width: 64px;
-  }
-  .section-skills .portfolio-title {
-    font-size: 1.5rem;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .section-portfolio .grid {
-    column-gap: 4.4rem;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5.4rem;
-  }
-}
-@media (max-width: 44.25rem) {
-  .container_sk {
-    padding: 0 3.2rem;
-  }
-  .section-skills svg {
-    height: 6rem;
-    width: 6rem;
-  }
-  .skills-grid {
-    column-gap: 1.2rem;
-  }
-  .section-portfolio .grid {
-    padding-inline: 0;
-    column-gap: 3.2rem;
-  }
-}
-@media (max-width: 35.5rem) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .section-skills .portfolio-title {
-    font-size: 2rem;
-  }
-  .skills-subheading {
-    font-size: 1.5rem;
-    margin-bottom: 5.2rem;
-  }
-  .section-portfolio .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (max-width: 30rem) {
-  .container_sk {
-    padding: 0 2.4rem;
-  }
-  .section-skills svg {
-    height: 5.2rem;
-    width: 5.2rem;
-  }
-  .section-skills .portfolio-title {
-    font-size: 1.8rem;
-  }
-  .skills-grid {
-    column-gap: 1.2rem;
-  }
-}
-@media (max-width: 27rem) {
-  .section-skills svg {
-    height: 4.4rem;
-    width: 4.4rem;
-  }
-  .skills-grid {
-    column-gap: 0.6rem;
-    row-gap: 4.4rem;
-  }
-}
-.heading-secondary {
-  font-weight: 700;
-  color: #b0b0b0;
-  letter-spacing: -0.5px;
-  text-align: center;
-  padding-bottom: 10px;
-}
-.heading-secondary {
-  font-size: 1.7rem;
-  line-height: 1.2;
-}
 .subheading_sk {
   display: block;
   color: #ffd109;
   margin-bottom: 4rem;
   letter-spacing: 0.75px;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px; /* Adjusted for better readability */
   font-weight: 700;
 }
 
-.skills {
-    padding: 50px 20px;
-    background-color: #1a1a1a; /* Dark background */
-    color: #e0e0e0; /* Light text */
-    text-align: center;
+/* Skills Row (Containers in a Single Row) */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 3rem; /* Space between containers */
+  justify-content: center; /* Center containers horizontally */
+  max-width: 1800px; /* Set maximum width to 1500px */
+  width: 100%; /* Ensure it takes full width up to 1500px */
+  padding: 0 2rem; /* Add padding for better spacing on smaller screens */
+}
+
+/* Skills Container */
+.skills-container {
+  background-color: #262626; /* Slightly lighter than section background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  flex: 1; /* Allow containers to grow and fill space */
+  max-width: 400px; /* Increase container width to fit more content */
+  min-width: 300px; /* Ensure containers don't get too small */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-container:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Category Headings */
+.skills-category {
+  font-size: 23px; /* Larger font size for headings */
+  font-weight: 700;
+  color: #ffd109; /* Yellow for headings */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Skills List (Single Column) */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increase space between skill items */
+}
+
+/* Skill Items */
+.skill-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem; /* Increase padding for larger containers */
+  background-color: #333; /* Darker background */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.skill-item img {
+  width: 80px; /* Increase icon size */
+  height: 80px;
+  margin-right: 1.5rem; /* Increase space between icon and text */
+}
+
+.skill-item p {
+  font-size: 18px; /* Increase font size for skill names */
+  margin: 0;
+  color: #e0e0e0; /* Light text */
+}
+
+/* Responsive Design */
+@media (max-width: 69rem) {
+  .container_sk {
+    padding: 0 4rem;
   }
-  
-  .skills-heading {
-    font-size: 2.5rem; /* Responsive font size */
-    font-weight: bold;
-    color: #ffd109; /* Yellow for headings */
-    margin-bottom: 40px;
+
+  .skills-container {
+    padding: 1.5rem;
+    max-width: 350px; /* Adjust container width for medium screens */
   }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-block-end: 3.6rem;
+}
+
+@media (max-width: 52rem) {
+  .container_sk {
+    padding: 0 2rem;
   }
-  .skill-item {
-    text-align: center;
-    padding: 20px;
-    background-color: #333; /* Darker background */
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .subheading_sk {
+    font-size: 2rem;
   }
-  .skill-item:hover {
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+
+  .skills-category {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
   }
+
   .skill-item img {
-    width: 50px;
+    width: 60px; /* Adjust icon size for smaller screens */
+    height: 60px;
+  }
+
+  .skill-item p {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 36.5rem) {
+  .container_sk {
+    padding: 0 1.5rem;
+  }
+
+  .subheading_sk {
+    font-size: 45px;
+  }
+
+  .skills-container {
+    padding: 1rem;
+    max-width: 100%; /* Full width on small screens */
+    min-width: 250px; /* Ensure containers don't get too small */
+  }
+
+  .skill-item img {
+    width: 50px; /* Adjust icon size for smaller screens */
     height: 50px;
   }
-  
+
   .skill-item p {
-    font-size: 18px;
-    margin: 10px 0 0;
-    color: #e0e0e0; /* Light text */
+    font-size: 18px; /* Adjust font size for smaller screens */
   }
+}
   
   /* Portfolio Section -----------------------------------------------------------------------------*/
   
+  .heading-secondary {
+    font-weight: 700;
+    color: #b0b0b0;
+    letter-spacing: -0.5px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .heading-secondary {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
   .subheading_pt {
     padding-top: 10px;
     display: block;
@@ -1114,7 +1057,7 @@ body {
   background-color: #333; /* Darker background */
   color: #e0e0e0; /* Light text */
   text-align: center;
-  margin-top: 9.6rem;
+  margin-top: 4.6rem;
 }
 
 .portfolio-heading {
