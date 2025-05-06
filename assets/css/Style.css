@@ -1269,28 +1269,57 @@ body {
 }
 
 .portfolio-btn {
-  padding: 20px 30px; /* Reduced padding for a smaller button */
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px; /* Reduced padding for a smaller button */
   background: linear-gradient(145deg, #4CAF50, #ffd000); /* Green gradient */
   color: #1a1a1a; /* Dark text */
   border: none;
-  border-radius: 30px; /* Rounded corners */
-  font-size: 15px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 14px;
   font-weight: 600;
-  padding: 1.5rem 9.2rem;
   border-radius: 500px;
+  width: auto;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin: 15px 0 0px auto; /* Push the button to the right */
+  margin: 15px 5px 0px auto; /* Push the button to the right */
   float: right; /* Alternative to margin-left: auto */
 }
+/* GitHub Button */
+.portfolio-btn[href*="github"] {
+  background: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+/* Power BI Button */
+.portfolio-btn[href*="powerbi"] {
+  background: #f2c811;
+  color: #000;
+  border-color: #f2c811;
+}
+
+/* Tableau Button */
+.portfolio-btn[href*="tableau"] {
+  background: #5b6abf;
+  color: white;
+  border-color: #5b6abf;
+}
+
+.portfolio-btn:not([href*="github"]):not([href*="powerbi"]):not([href*="tableau"]) {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
 
 .portfolio-btn:hover {
-  background: linear-gradient(45deg, #4dff00, #ffd109); /* Yellow gradient on hover */
-  transform: translateY(-3px); /* Slight lift */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
 }
 
 .portfolio-btn:active {
@@ -1449,9 +1478,10 @@ body {
   .portfolio-btn {
     align-content: center;
     text-align: center;
+    padding: 12px 16px;
     height: 50px;
     width: 100%; /* Full width for button */
-    font-size: 1.5rem; /* Reduce font size */
+    font-size: 14px; /* Reduce font size */
     margin: 10px 0; /* Add margin */
   }
 }
